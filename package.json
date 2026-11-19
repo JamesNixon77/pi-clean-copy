@@ -1,0 +1,40 @@
+{
+  "name": "pi-clean-copy",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Copy text from Pi's fullscreen transcript as the markdown it was rendered from, without table borders, padding, or wrap newlines.",
+  "author": "James Nixon",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "clipboard",
+    "terminal"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/clean-copy/index.ts"
+    ]
+  },
+  "files": [
+    "extensions/clean-copy",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.5.0"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "check": "node --experimental-strip-types --test tests/*.test.mjs"
+  }
+}
